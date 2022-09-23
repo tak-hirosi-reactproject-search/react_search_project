@@ -17,15 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <div class='select-menu'>
-        안녕
-        {/* <li><a href="#"> 시간시간 시간선택 UI</a></li>
-        <li><a href="#"> 종료시간 시간선택 UI</a></li>
-
-        <a href="#single">종료시간 시간선택 UI</a> */}
-      </div>
       </header>
-      
     </div>
   );
 }

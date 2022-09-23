@@ -23,6 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   float: left;
+  width: 80%;
 }
 .select-menu{
   background-color: #696868;
@@ -34,7 +35,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   float: right;
-  width: 100px;
 }
 .App-link {
   color: #61dafb;
