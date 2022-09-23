@@ -4,26 +4,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div class='right-box'>오른쪽1</div>
-      <li><a href="#"> 시간시간 시간선택 UI</a></li>
-      <li><a href="#"> 종료시간 시간선택 UI</a></li>
-
-      <a href="#single">종료시간 시간선택 UI</a>
-
-
-
-
-
-
-
-      
-      
-      
-
-
-
-
-
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -37,7 +17,15 @@ function App() {
         >
           Learn React
         </a>
+        <div class='select-menu'>
+        안녕
+        {/* <li><a href="#"> 시간시간 시간선택 UI</a></li>
+        <li><a href="#"> 종료시간 시간선택 UI</a></li>
+
+        <a href="#single">종료시간 시간선택 UI</a> */}
+      </div>
       </header>
+      
     </div>
   );
 }

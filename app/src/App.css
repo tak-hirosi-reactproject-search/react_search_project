@@ -13,7 +13,7 @@
   }
 }
 .App-header {
-  background-color: #ffffff;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,8 +21,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  float: left;
 }
-
+.select-menu{
+  background-color: #696868;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  float: right;
+  width: 100px;
+}
 .App-link {
   color: #61dafb;
 }
