@@ -1,26 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import MultiSelect from  'react-multiple-select-dropdown-lite';
 import  'react-multiple-select-dropdown-lite/dist/index.css';
 
 function App() {
-  const [value, setvalue] = useState('')
+  const [videoSetects, setVideoSelect] = useState([])
+  const [videos, setVideoList] = useState([])
 
   const  handleOnchange  =  val  => {
-    setvalue(val)
+    setVideoSelect(val)
   }
 
-  const  options  = [
-    { label:  'Option 1', value:  'option_1'  },
-    { label:  'Option 2', value:  'option_2'  },
-    { label:  'Option 3', value:  'option_3'  },
-    { label:  'Option 4', value:  'option_4'  },
-  ]
+  useEffect(() => {
+    (async () =>{
+      const videos = await axios.get('http://127.0.0.1:8000/api/');
+      setVideoList(videos.data);
+    })();
+  }, []);
 
   return (
     <div className="App">
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -39,7 +42,7 @@ function App() {
         <div className='video-menu'>
           <MultiSelect
             onChange={handleOnchange}
-            options={options}
+            options={videos}
             name="영상선택"
           />
         </div>
