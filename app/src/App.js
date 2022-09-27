@@ -2,8 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import React, { useState } from 'react';
-import MultiSelect from  'react-multiple-select-dropdown-lite';
-import  'react-multiple-select-dropdown-lite/dist/index.css';
+
 
 function App() {
   const [value, setvalue] = useState('')
@@ -36,13 +35,7 @@ function App() {
         </a>
       </header>
       <div className='select-menu'>
-        <div className='video-menu'>
-          <MultiSelect
-            onChange={handleOnchange}
-            options={options}
-            name="영상선택"
-          />
-        </div>
+
       </div>
     </div>
   );
