@@ -14,17 +14,34 @@ function App() {
     setVideoSelect(val)
   }
 
-  useEffect(() => {
-    (async () =>{
-      const videos = await axios.get('http://127.0.0.1:8000/api/');
-      setVideoList(videos.data);
-    })();
-  }, []);
+  const handleSelectOnMenu = val =>{
+    async function get(){
+      const res = await fetch('http://127.0.0.1:8000/api/');
+      const result = await res.json();
+      
+      const jres = [];
+
+      result.map((obj =>{
+        const new_obj = {};
+        new_obj.label = obj.name;
+        new_obj.value = obj.id;
+        jres.push(new_obj);
+        
+      }));
+      
+      setVideoList(jres);
+    }
+    get();
+  };
+
+// useEffect(()=>{
+// console.log('videos==================>',videos)
+// },[videos])
 
   return (
     <div className="App">
       
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to Mola555555555.
@@ -37,15 +54,20 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </div>
       <div className='select-menu'>
         <div className='video-menu'>
+          {/* <div>
+            {videoSetects}
+          </div> */}
           <MultiSelect
             onChange={handleOnchange}
+            onMenuOpen={handleSelectOnMenu}
             options={videos}
             name="영상선택"
           />
         </div>
+        
       </div>
     </div>
   );

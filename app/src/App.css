@@ -24,6 +24,8 @@
   color: white;
   float: left;
   width: 80%;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
 }
 .select-menu{
   background-color: #b9b9b9;
@@ -34,6 +36,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   float: right;
+  flex-basis: 300px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
 }
 .video-menu{
   min-height: 100vh;
