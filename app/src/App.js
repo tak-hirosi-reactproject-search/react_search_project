@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import MultiSelect from  'react-multiple-select-dropdown-lite';
@@ -40,7 +39,6 @@ function App() {
 
   return (
     <div className="App">
-      
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -65,9 +63,9 @@ function App() {
             onMenuOpen={handleSelectOnMenu}
             options={videos}
             name="영상선택"
+            placeholder="영상선택"
           />
         </div>
-        
       </div>
     </div>
   );
