@@ -1,7 +1,7 @@
 USR=tglee
 APP_NAME=react_search_project
 IMAGE_NAME=react_search_project_image
-MODEL_VOLUME = /home/${USR}/react-django/$(APP_NAME):/react-django/$(APP_NAME)
+MODEL_VOLUME = /home/${USR}/react-django/$(APP_NAME)/app:/$(APP_NAME)
  
 # Build and run the container
 build:
