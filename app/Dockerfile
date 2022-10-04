@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16.3.0-alpine
 
 # 작업 폴더를 만들고 npm 설치
 RUN mkdir -p /react_search_project
