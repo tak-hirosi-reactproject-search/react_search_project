@@ -1,7 +1,7 @@
 FROM node:12.16.2 as builder
 
 # 작업 폴더를 만들고 npm 설치
-RUN mkdir -p /react_search_project && chown ${usr} /react_search_project
+RUN mkdir -p /react_search_project
 WORKDIR /react_search_project
 COPY . .
 WORKDIR ./react_search_project/app
