@@ -5,7 +5,6 @@ RUN mkdir -p /react_search_project
 WORKDIR /react_search_project
 COPY . .
 WORKDIR ./react_search_project/app
-RUN npm audit
 RUN npm install --silent
 RUN npm install react-scripts -g --silent
 
