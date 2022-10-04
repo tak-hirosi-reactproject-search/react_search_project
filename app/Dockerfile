@@ -9,4 +9,4 @@ RUN npm install --silent
 RUN npm install react-scripts -g --silent
 
 # COPY package.json /usr/src/app/package.json
-CMD ["PORT=3333", "npm", "start"]
+CMD ["npm", "start"]
