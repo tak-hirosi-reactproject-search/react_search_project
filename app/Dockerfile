@@ -6,7 +6,7 @@ WORKDIR /react_search_project
 COPY . .
 WORKDIR ./react_search_project/app
 RUN npm install --silent
-RUN npm install -g create-react-app
+RUN npm install tar@latest -g
 RUN npm install react-scripts -g --silent
 
 # COPY package.json /usr/src/app/package.json
