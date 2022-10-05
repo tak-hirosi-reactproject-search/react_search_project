@@ -1,4 +1,4 @@
-FROM node:16.17.0
+FROM node:16.17.0-alpaine
 
 # Setup user account
 # id -g, id -u
