@@ -1,7 +1,7 @@
 UID=1014
 USR=tglee
-APP_NAME=react_search_project
-IMAGE_NAME=react_search_project_image
+APP_NAME=react_search_project1
+IMAGE_NAME=react_search_project_image1
 MODEL_VOLUME = /home/${USR}/metaproject/$(APP_NAME)/app:/$(APP_NAME)
  
 # Build and run the container
