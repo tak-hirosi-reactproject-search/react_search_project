@@ -13,6 +13,7 @@ RUN echo ${usr}:${usr}1 | chpasswd
 RUN mkdir -p /react_search_project  && chown ${usr} /react_search_project
 WORKDIR /react_search_project
 
+RUN npm install -g create-react-app 
 COPY package.json ./package.json
 COPY package-lock.json ./package-lock.json
 RUN npm install
