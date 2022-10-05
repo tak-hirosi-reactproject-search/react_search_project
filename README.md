@@ -10,7 +10,11 @@ make build
 
 # how to docker run
 ```bash
-git pull
-make run
+git pull && make run
+```
+
+# how to delete docker image
+```bash
+make rmrmi
 ```
 
