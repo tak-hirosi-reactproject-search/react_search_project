@@ -12,7 +12,7 @@ RUN echo ${usr}:${usr}1 | chpasswd
 # 작업 폴더를 만들고 npm 설치
 RUN mkdir -p /react_search_project
 WORKDIR /react_search_project
-COPY package.json ./
+COPY . ./
 # RUN npm i -g npm-check-updates
 # RUN ncu -u
 RUN npm install
