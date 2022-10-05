@@ -1,4 +1,4 @@
-FROM node:8.19.2
+FROM node:16.17.0
 
 # Setup user account
 # id -g, id -u
