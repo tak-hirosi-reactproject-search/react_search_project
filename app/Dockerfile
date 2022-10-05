@@ -18,7 +18,7 @@ COPY . ./
 RUN npm install
 RUN npm install -g create-react-app 
 RUN npm update
-# RUN npm install react-scripts -g
+RUN npm install react-scripts -g
 # RUN npm install tar@latest -g
 # COPY package.json /usr/src/app/package.json
 
