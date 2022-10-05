@@ -11,7 +11,7 @@ ARG usr
 
 
 # 작업 폴더를 만들고 npm 설치
-RUN mkdir -p /react_search_project  && chown ${usr} /react_search_project
+RUN mkdir -p /react_search_project #  && chown ${usr} /react_search_project
 WORKDIR /react_search_project
 
 COPY ./app/package.json /react_search_project/
