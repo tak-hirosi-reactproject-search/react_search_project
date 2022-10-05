@@ -16,9 +16,9 @@ WORKDIR /react_search_project
 COPY package.json ./package.json
 COPY package-lock.json ./package-lock.json
 RUN npm install
-RUN npm install -g serve
-RUN npm install react-scripts@5.0.1 -g --silent
-RUN npm install react -g
+# RUN npm install -g serve
+RUN npm install react-scripts@5.0.1 -g
+RUN npm install react@18.2.0 -g
 
 
 # RUN npm install react-scripts -g
@@ -26,4 +26,5 @@ RUN npm install react -g
 # RUN npm update
 COPY . .
 
-CMD ["serve", "-s", "build"]
+CMD ["npm", "run", "start"]
+# CMD ["serve", "-s", "build"]
