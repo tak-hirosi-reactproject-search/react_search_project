@@ -12,15 +12,15 @@ RUN echo ${usr}:${usr}1 | chpasswd
 # 작업 폴더를 만들고 npm 설치
 RUN mkdir -p /react_search_project
 WORKDIR /react_search_project
-COPY . ./
-# RUN npm i -g npm-check-updates
-# RUN ncu -u
-RUN rm -r node_modules
+
+COPY package.json ./package.json
+COPY package-lock.json ./package-lock.json
 RUN npm install
-RUN npm install -g create-react-app 
-# RUN npm update
+
 # RUN npm install react-scripts -g
-# RUN npm install tar@latest -g
-# COPY package.json /usr/src/app/package.json
+# RUN npm install react -g
+# RUN npm install -g create-react-app 
+# RUN npm update
+COPY . .
 
 CMD ["npm","run","start"]
