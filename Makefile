@@ -1,7 +1,7 @@
 UID=1014
 USR=tglee
-APP_NAME=react_search1
-IMAGE_NAME=react_search_image1
+APP_NAME=react_search_project1
+IMAGE_NAME=react_search_project_image1
 MODEL_VOLUME = /home/${USR}/react-django/$(APP_NAME)/app:/$(APP_NAME)
  
 # Build and run the container
