@@ -1,6 +1,6 @@
 UID=1014
 USR=tglee
-APP_NAME=react_search_project1
+APP_NAME=react_search_project
 IMAGE_NAME=react_search_project_image
 MODEL_VOLUME = /home/${USR}/metaproject/react_search_project/app:/$(APP_NAME)
  
@@ -11,7 +11,6 @@ build:
 run:
 	@echo 'docker run -ti --name="$(APP_NAME)" --shm-size 32gb -p 3000:3000 -v $(MODEL_VOLUME) $(IMAGE_NAME)'
 	docker run -ti --name="$(APP_NAME)" --shm-size 32gb -p 3000:3000 -v $(MODEL_VOLUME) $(IMAGE_NAME)
-	# docker run -d -t --name="$(APP_NAME)" --net=host --ipc=host --shm-size 32gb -v $(MODEL_VOLUME) $(IMAGE_NAME)
 stop:
 	@echo 'stop docker $(APP_NAME)'
 	docker stop $(APP_NAME)
