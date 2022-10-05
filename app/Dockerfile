@@ -15,11 +15,11 @@ WORKDIR /react_search_project
 COPY . ./
 # RUN npm i -g npm-check-updates
 # RUN ncu -u
+RUN npm install
 RUN npm install -g create-react-app 
 RUN npm update
 # RUN npm install react-scripts -g
-RUN npm install
 # RUN npm install tar@latest -g
-
 # COPY package.json /usr/src/app/package.json
+
 CMD ["npm","run","start"]
