@@ -15,7 +15,7 @@ ARG fname
 RUN mkdir -p /${fname} #  && chown ${usr} /${fname}
 WORKDIR /${fname}
 
-COPY ./app/package.json /${fname}/package.json
+COPY ./app/package.json /${fname}
 RUN npm install
 RUN npm install react-scripts@5.0.1 -g
 
