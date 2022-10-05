@@ -19,6 +19,6 @@ RUN npm install
 RUN npm install react-scripts@5.0.1 -g
 
 
-COPY ./app /react_search_project
+COPY ./app/ /react_search_project
 
 CMD ["npm", "run", "start"]
