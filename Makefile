@@ -21,3 +21,7 @@ rm:
 rmi:
 	@echo 'rmi docker $(IMAGE_NAME)'
 	docker rmi $(IMAGE_NAME)
+	
+rmrmi:
+	docker stop $(APP_NAME) && docker rm $(APP_NAME)
+	docker rmi $(IMAGE_NAME)
