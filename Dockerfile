@@ -14,7 +14,7 @@ ARG usr
 RUN mkdir -p /react_search_project #  && chown ${usr} /react_search_project
 WORKDIR /react_search_project
 
-COPY ./app/package.json /react_search_project/
+COPY ./app/package.json /react_search_project/package.json
 RUN npm install
 RUN npm install react-scripts@5.0.1 -g
 
