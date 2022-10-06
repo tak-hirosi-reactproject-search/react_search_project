@@ -1,8 +1,9 @@
 UID=1014
 USR=tglee
-APP_NAME=react_search_project
-IMAGE_NAME=react_search_project_image
-MODEL_VOLUME = /home/${USR}/metaproject/react_search_project/app:/$(APP_NAME)
+APP_NAME=metafront
+IMAGE_NAME=metafront_image
+TARGET_PATH=/home/${USR}/metaproject/react_search_project/app
+MODEL_VOLUME = ${TARGET_PATH}:/$(APP_NAME)
  
 # Build and run the container
 build:
