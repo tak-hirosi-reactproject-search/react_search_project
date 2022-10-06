@@ -15,7 +15,8 @@ function App() {
 
   const handleSelectOnMenu = val =>{
     async function get(){
-      const res = await fetch('http://127.0.0.1:8000/api/');
+      // django api url => http://localhost:3355
+      const res = await fetch('http://localhost:3355/video/');
       const result = await res.json();
       
       const jres = [];
