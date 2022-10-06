@@ -10,8 +10,8 @@ cd react_search_project
 # plz Change Makefile
 ```Makefile
 UID= {#change here}
-USR=metafront
-APP_NAME= {#change here}
+USR={#change here}
+APP_NAME= metafront
 IMAGE_NAME= {#change here}
 TARGET_PATH= {#change here=source path}/react_search_project/app
 ```
