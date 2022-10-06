@@ -20,8 +20,8 @@ RUN apt-get update \
     && locale-gen ko_KR.UTF-8
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN sudo dpkg -i google-chrome-stable_current_amd64.deb
 RUN sudo apt-get install -f
+RUN sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
 # 작업 폴더를 만들고 npm 설치
