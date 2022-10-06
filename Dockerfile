@@ -15,7 +15,7 @@ RUN echo ${usr}:${usr}1 | chpasswd
 RUN apt-get update \
     && apt-get install -y sudo \
     && apt-get install -y libgl1-mesa-glx git locales \
-    && apt-get install -y wget
+    && apt-get install -y wget \
     && locale-gen ko_KR.UTF-8
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
