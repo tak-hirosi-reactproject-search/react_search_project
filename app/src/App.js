@@ -15,7 +15,7 @@ function App() {
 
   const handleSelectOnMenu = val =>{
     async function get(){
-      const res = await fetch('http://127.0.0.1:8000/api/');
+      const res = await fetch('http://localhost:3355/video/');
       const result = await res.json();
       
       const jres = [];
