@@ -1,5 +1,5 @@
-UID=1014
-USR=tglee
+UID=
+USR=
 APP_NAME=metafront
 IMAGE_NAME=metafront_image
 TARGET_PATH=/home/${USR}/metaproject/react_search_project/app
