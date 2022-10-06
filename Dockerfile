@@ -16,11 +16,11 @@ WORKDIR /${fname}
 
 COPY ./app/package.json /${fname}
 RUN npm install
-RUN npm install -g serve
+# RUN npm install -g serve
 RUN npm install react-scripts@5.0.1 -g
 
 
 COPY ./app /${fname}
 
-CMD ["serve", "-s", "build"]
-# CMD ["npm", "run", "start"]
+# CMD ["serve", "-s", "build"]
+CMD ["npm", "run", "start"]
