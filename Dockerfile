@@ -10,20 +10,6 @@ RUN groupadd -r -f -g ${gid} ${usr} && useradd -o -r -l -u ${uid} -g ${gid} -ms 
 RUN usermod -aG sudo ${usr}
 RUN echo ${usr}:${usr}1 | chpasswd
 
-# download chrome
-# install
-RUN apt-get update \
-    && apt-get install -y sudo \
-    && apt-get install -y libgl1-mesa-glx git locales \
-    && apt-get install -y wget \
-    && dpkg -i vufind_3.1.1.deb || true \
-    && locale-gen ko_KR.UTF-8
-
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN sudo apt-get install -f
-RUN sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-
 # 작업 폴더를 만들고 npm 설치
 RUN mkdir -p /${fname} && chown ${usr} /${fname}
 WORKDIR /${fname}
