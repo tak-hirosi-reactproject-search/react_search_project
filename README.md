@@ -8,7 +8,7 @@ cd react_search_project
 make build
 ```
 
-# plz Change Make file
+# plz Change Makefile
 ```Makefile
 UID= {#change here}
 USR=metafront
