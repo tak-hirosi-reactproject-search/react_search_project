@@ -1,17 +1,15 @@
 .App {
+  display: flex;
   text-align: center;
+  background: none;                    /*백그라운드 색깔 없애기*/
 }
 
 .App-logo {
   height: 40vmin;
+  animation: App-logo-spin infinite 20s linear;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #ff9f9f;
@@ -23,19 +21,25 @@
   font-size: calc(1px + 2vmin);
   color: rgb(6, 24, 41);
   float: left;
-  width: 80%;
+  width: auto;
+  flex-grow: 1;
+  flex-wrap: nowrap;
 }
 
 .container{
   background-color: #faffb9ee;
+  min-width: 70vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 1vmin);
   color: rgb(255, 6, 6);
   float: right;
+  flex-basis: 300px;
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 
@@ -170,28 +174,59 @@
 
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ가로정렬ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+.video-menu{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
 .parent {
   display: flex;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .parent2 {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .parent3 {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: left;
 }
 
 .parent4 {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: left;
 }
 
 .parent5 {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: left;
 }
 
 .parent6 {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: left;
 }
 
 /* 참고 사이트: https://tamagotch.tistory.com/8 */

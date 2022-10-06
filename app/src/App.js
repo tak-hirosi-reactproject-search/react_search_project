@@ -30,13 +30,17 @@ function App() {
   };
 
   // Video select value
-  const [videoSelect, setvideoSelect] = useState([])
+  const [videoSelect, setVideoSelect] = useState([])
   const  OnchangeSelectVideo  =  val  => {
     setVideoSelect(val)
   }
     
   // 드롭바1 시작 
   const [value1, setvalue1] = useState('')
+
+  const  handleOnchange1 =  (val)  => {
+    setvalue1(val)
+  }
 
   const  options  = [
     { label:  'long sleeve', value:  '1'  },
@@ -127,7 +131,15 @@ function App() {
       <body>
         <div class="container">
           <div class="hero">
-
+              <div class="video-menu">
+                <MultiSelect
+                  onChange={OnchangeSelectVideo}
+                  onMenuOpen={handleVideoMenuSetting}
+                  options={videos}
+                  name="영상선택"
+                  placeholder="영상선택"
+                />
+              </div>
 
 
 
@@ -140,11 +152,11 @@ function App() {
               <div class="parent6">
                                             <p><a href="#">상의 종류</a></p>
                           <div>
-                            {value}
+                            {value1}
                           </div>
                           <div className='video-menu'>
                             <MultiSelect
-                              onChange={handleOnchange}
+                              onChange={handleOnchange1}
                               options={options}
                               name="영상선택"/>
                             </div>
