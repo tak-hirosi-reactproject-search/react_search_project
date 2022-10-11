@@ -10,6 +10,7 @@ MODEL_VOLUME = ${TARGET_PATH}:/${SRC_NAME}
  
 # Build and run the container
 build:
+	@echo "====<UID=${UID}> <USR=${USR}> <PORT_NUM=${PORT_NUM}> <SRC_NAME=${SRC_NAME}>==="
 	@echo "docker image build -t $(IMAGE_NAME) ."
 	docker image build --build-arg uid="$(UID)" --build-arg gid="$(UID)" --build-arg usr="$(USR)" --build-arg portnum=$(PORT_NUM) --build-arg fname=${SRC_NAME} -t $(IMAGE_NAME) .
 run:
