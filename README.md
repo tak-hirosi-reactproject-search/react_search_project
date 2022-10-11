@@ -9,11 +9,9 @@ cd react_search_project
 
 # plz Change Makefile
 ```Makefile
-UID= {#change here}
-USR={#change here}
-APP_NAME= metafront
-IMAGE_NAME= {#change here}
-TARGET_PATH= {#change here=source path}/react_search_project/app
+UID={#change}
+USR={#change}
+PORT_NUM=3000 # {#change}
 ```
 
 # how to docker run
