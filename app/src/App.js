@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import MultiSelect from  'react-multiple-select-dropdown-lite';
 import 'react-multiple-select-dropdown-lite/dist/index.css';
 import qs from 'qs';
@@ -110,8 +110,19 @@ function App() {
   /* // 드롭바4 끝 */
 
   // And Or button
-
-
+  const [condition, setCondition] = useState("union");
+  const onCheckedCondition = useCallback(
+    (checked) =>{
+      if(checked) {
+        setCondition("intersect");
+      }
+      else {
+        setCondition("union");
+      }
+      console.log("Condition : " + condition);
+    },
+    [condition]
+  );
   // And Or button
 
   // search botton
@@ -124,7 +135,6 @@ function App() {
       const top_color = attributeTopColor;
       const bottom_type = attributeBottomType;
       const bottom_color = attributeBottomColor;
-      const condition = "union";
       const qstr = qs.stringify({
         video_id,
         top_type,
@@ -217,6 +227,7 @@ function App() {
                             <label class="switch-button">
                             <input 
                               type="checkbox"
+                              onChange={(e) => onCheckedCondition(e.target.checked)}
                             />
                             <span class="onoff-switch"></span>
                             </label>
