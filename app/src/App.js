@@ -151,9 +151,7 @@ function App() {
 
               <div class="parent6">
                                             <p><a href="#">상의 종류</a></p>
-                          <div>
-                            {value1}
-                          </div>
+                          
                           <div className='video-menu'>
                             <MultiSelect
                               onChange={handleOnchange1}
@@ -167,9 +165,7 @@ function App() {
               <div class="parent5">
                                             <p><a href="#">상의 색상</a></p>
               {/* 이것도 드롭바 관련된듯? -시작 */}
-                            <div>
-                              {value2}
-                            </div>
+                            
                             <div className='video-menu'>
                               <MultiSelect
                                 onChange={handleOnchange2}
@@ -195,9 +191,7 @@ function App() {
               <div class="parent4">
                                             <p><a href="#">하의 종류</a></p>
               {/* 이것도 드롭바 관련된듯? -테스트*/}
-                            <div>
-                              {value3}
-                            </div>
+                            
                             <div className='video-menu'>
                               <MultiSelect
                                 onChange={handleOnchange3}
@@ -212,9 +206,7 @@ function App() {
               <div class="parent2">
                                             <p><a href="#">하의 색상</a></p>
               {/* /* 이것도 드롭바 관련된듯? -테스트*/}
-                            <div>
-                            {value4}
-                            </div>
+                           
                             <div className='video-menu'>
                                 <MultiSelect
                                   onChange={handleOnchange4}
