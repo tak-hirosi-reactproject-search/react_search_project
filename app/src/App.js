@@ -109,9 +109,32 @@ function App() {
   ]
   /* // 드롭바4 끝 */
 
+  // And Or button
+  
+
+  // And Or button
+
   // search botton
+  const [searchResults, setSearchResults] = useState([])
 
+  const handleSearchObjects = val =>{
+    async function get(){
+      const qstr = qs.stringify({
+        video_id:{videoSelect},
+        top_type:{attributeTopType},
+        top_color:{attributeTopColor},
+        bottom_type:{attributeBottomType},
+        bottom_color:{attributeBottomColor},
+      });
+      console.log("QS : "+ qstr);
+      // django api url => http://192.168.0.214:3355
+      const res = await fetch('http://192.168.0.214:3355/video/search/'+qstr+"/");
+      const result = await res.json();
 
+      setSearchResults(res);
+    }
+    get();
+  };
   // search botton
 
 
