@@ -105,12 +105,12 @@ function App() {
     { label:  'brown', value:  '26'  },
     { label:  'white', value:  '27'  },
     { label:  'grey', value:  '28'  },
-    { label:  'sleeveless11', value:  '29'  },
+    { label:  'black', value:  '29'  },
   ]
   /* // 드롭바4 끝 */
 
   // And Or button
-  
+
 
   // And Or button
 
@@ -119,19 +119,25 @@ function App() {
 
   const handleSearchObjects = val =>{
     async function get(){
+      const video_id = videoSelect;
+      const top_type = attributeTopType;
+      const top_color = attributeTopColor;
+      const bottom_type = attributeBottomType;
+      const bottom_color = attributeBottomColor;
       const qstr = qs.stringify({
-        video_id:{videoSelect},
-        top_type:{attributeTopType},
-        top_color:{attributeTopColor},
-        bottom_type:{attributeBottomType},
-        bottom_color:{attributeBottomColor},
+        video_id,
+        top_type,
+        top_color,
+        bottom_type,
+        bottom_color,
       });
       console.log("QS : "+ qstr);
       // django api url => http://192.168.0.214:3355
-      const res = await fetch('http://192.168.0.214:3355/video/search/'+qstr+"/");
+      const res = await fetch('http://192.168.0.214:3355/search/'+qstr+"/");
       const result = await res.json();
 
       setSearchResults(res);
+      console.log(searchResults);
     }
     get();
   };
@@ -247,7 +253,11 @@ function App() {
 
               <div class="parent">
                                           {/* <div className='select-botton'> */}
-                                            <li><a href="#">검색</a></li>
+                                            <li>
+                                              <a href="#" onClick={e => handleSearchObjects(e)}>
+                                              검색
+                                              </a>
+                                            </li>
                                           {/* </div> */}
 
                                             <li><a href="#">SR 저장</a></li>
