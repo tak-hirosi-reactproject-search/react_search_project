@@ -36,13 +36,13 @@ function App() {
   }
     
   // 드롭바1 시작 
-  const [value1, setvalue1] = useState('')
+  const [attributeTopType, setAttributeTopType] = useState('')
 
-  const  handleOnchange1 =  (val)  => {
-    setvalue1(val)
+  const  handleOnchangeAttributeTopType =  (val)  => {
+    setAttributeTopType(val)
   }
 
-  const  options  = [
+  const  optionTopType  = [
     { label:  'long sleeve', value:  '1'  },
     { label:  'short sleeve', value:  '2'  },
     { label:  'sleeveless', value:  '3'  },
@@ -51,13 +51,13 @@ function App() {
   // 드롭바1 끝
 
   // 드롭바2 시작
-  const [value2, setvalue2] = useState([])
+  const [attributeTopColor, setAttributeTopColor] = useState([])
 
-  const  handleOnchange2  =  (val)  => {
-    setvalue2(val)
+  const  handleOnchangeAttributeTopColor  =  (val)  => {
+    setAttributeTopColor(val)
   }
 
-  const  options1  = [
+  const  optionTopColor  = [
     { label:  'red', value:  '5'  },
     { label:  'orange', value:  '6'  },
     { label:  'yellow', value:  '7'  },
@@ -73,13 +73,13 @@ function App() {
   // 드롭바2 끝
 
   // 드롭바3 시작
-    const [value3, setvalue3] = useState([])
+    const [attributeBottomType, setAttributeBottomType] = useState([])
 
-    const  handleOnchange3  =  (val)  => {
-      setvalue3(val)
+    const  handleOnchangeAttributeBottomColor  =  (val)  => {
+      setAttributeBottomType(val)
     }
 
-    const  options3  = [
+    const  optionBottomType  = [
       { label:  'long_pants', value:  '16'  },
       { label:  'short_pants', value:  '17'  },
       { label:  'skirt', value:  '18'  },
@@ -87,13 +87,13 @@ function App() {
   // 드롭바3 끝
 
   /* // 드롭바4 시작아악 */
-  const [value4, setvalue4] = useState([])
+  const [attributeBottomColor, setAttributeBottomColor] = useState([])
 
   const  handleOnchange4  =  (val)  => {
-    setvalue4(val)
+    setAttributeBottomColor(val)
   }
 
-  const  options4  = [
+  const  optionBottomColor  = [
     { label:  'red', value:  '19'  },
     { label:  'orange', value:  '20'  },
     { label:  'yellow', value:  '21'  },
@@ -154,8 +154,8 @@ function App() {
                           
                           <div className='video-menu'>
                             <MultiSelect
-                              onChange={handleOnchange1}
-                              options={options}
+                              onChange={handleOnchangeAttributeTopType}
+                              options={optionTopType}
                               name="영상선택"/>
                             </div>
               </div>
@@ -168,8 +168,8 @@ function App() {
                             
                             <div className='video-menu'>
                               <MultiSelect
-                                onChange={handleOnchange2}
-                                options={options1}
+                                onChange={handleOnchangeAttributeTopColor}
+                                options={optionTopColor}
                                 name="top-type"/>
                             </div>
               {/* 이것도 드롭바 관련된듯? -끝 */}
@@ -194,8 +194,8 @@ function App() {
                             
                             <div className='video-menu'>
                               <MultiSelect
-                                onChange={handleOnchange3}
-                                options={options3}
+                                onChange={handleOnchangeAttributeBottomColor}
+                                options={optionBottomType}
                                 name="top-type"/>
                             </div>
               {/* 이것도 드롭바 관련된듯? -테스트*/}
@@ -210,7 +210,7 @@ function App() {
                             <div className='video-menu'>
                                 <MultiSelect
                                   onChange={handleOnchange4}
-                                  options={options4}
+                                  options={optionBottomColor}
                                   name="top-type"/>
                             </div>
               {/* 이것도 드롭바 관련된듯? -테스트*/}
