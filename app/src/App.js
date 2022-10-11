@@ -11,8 +11,8 @@ function App() {
 
   const handleVideoMenuSetting = val =>{
     async function get(){
-      // django api url => http://localhost:3355
-      const res = await fetch('http://localhost:3355/video/');
+      // django api url => http://192.168.0.214:3355
+      const res = await fetch('http://192.168.0.214:3355/video/');
       const result = await res.json();
 
       const jres = [];
