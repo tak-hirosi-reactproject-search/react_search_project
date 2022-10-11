@@ -124,14 +124,16 @@ function App() {
       const top_color = attributeTopColor;
       const bottom_type = attributeBottomType;
       const bottom_color = attributeBottomColor;
+      const condition = "union";
       const qstr = qs.stringify({
         video_id,
         top_type,
         top_color,
         bottom_type,
         bottom_color,
+        condition,
       });
-      console.log("QS : "+ qstr);
+      console.log("Get : "+ 'http://192.168.0.214:3355/search/'+qstr+"/");
       // django api url => http://192.168.0.214:3355
       const res = await fetch('http://192.168.0.214:3355/search/'+qstr+"/");
       const result = await res.json();
@@ -213,7 +215,9 @@ function App() {
               <div class="parent2">
                                             <p><a href="#">AND</a></p>
                             <label class="switch-button">
-                            <input type="checkbox"/>
+                            <input 
+                              type="checkbox"
+                            />
                             <span class="onoff-switch"></span>
                             </label>
                                             <p><a href="#">OR</a></p>
