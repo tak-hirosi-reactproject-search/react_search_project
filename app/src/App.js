@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import MultiSelect from  'react-multiple-select-dropdown-lite';
-import  'react-multiple-select-dropdown-lite/dist/index.css';
+import 'react-multiple-select-dropdown-lite/dist/index.css';
+import qs from 'qs';
 
 function App() {
 
@@ -75,7 +76,7 @@ function App() {
   // 드롭바3 시작
     const [attributeBottomType, setAttributeBottomType] = useState([])
 
-    const  handleOnchangeAttributeBottomColor  =  (val)  => {
+    const  handleOnchangeAttributeBottomType  =  (val)  => {
       setAttributeBottomType(val)
     }
 
@@ -89,7 +90,7 @@ function App() {
   /* // 드롭바4 시작아악 */
   const [attributeBottomColor, setAttributeBottomColor] = useState([])
 
-  const  handleOnchange4  =  (val)  => {
+  const  handleOnchangeAttributeBottomColor  =  (val)  => {
     setAttributeBottomColor(val)
   }
 
@@ -108,7 +109,10 @@ function App() {
   ]
   /* // 드롭바4 끝 */
 
+  // search botton
 
+
+  // search botton
 
 
   return (
@@ -194,7 +198,7 @@ function App() {
                             
                             <div className='video-menu'>
                               <MultiSelect
-                                onChange={handleOnchangeAttributeBottomColor}
+                                onChange={handleOnchangeAttributeBottomType}
                                 options={optionBottomType}
                                 name="top-type"/>
                             </div>
@@ -209,7 +213,7 @@ function App() {
                            
                             <div className='video-menu'>
                                 <MultiSelect
-                                  onChange={handleOnchange4}
+                                  onChange={handleOnchangeAttributeBottomColor}
                                   options={optionBottomColor}
                                   name="top-type"/>
                             </div>
