@@ -176,9 +176,9 @@ function App() {
           <div className='search-result'>
             {searchResults.map((obj) => (
               <div className="obj-item" key={obj.bbox_id}>
-                <h3>PATH : {obj.crop_img_path}</h3>
-                <p>FRAME : {obj.frame_num}</p>
+                <h5>PATH : {obj.crop_img_path}</h5>
                 <hr/>
+                <p>FRAME : {obj.frame_num}</p>
               </div>
             ))}
           </div>
