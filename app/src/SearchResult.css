@@ -1,0 +1,16 @@
+.base-logo {
+    height: 40vmin;
+    animation: App-logo-spin infinite 20s linear;
+    pointer-events: none;
+  }
+  
+  
+  .search-result {
+    background-color: #ff9f9f;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 52, 96);
+    width: 50px;
+    height: 50ps;
+    background-size: cover;
+  }
+  
