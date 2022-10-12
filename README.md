@@ -29,6 +29,7 @@ react가 실행가능한 환경 구축
 UID={#change}
 USR={#change}
 PORT_NUM=3000 # {#change}
+VIDEO_TARGET_PATH=/home/samchu/project-meta/ # {#change}
 ```
 
 ### how to docker run
