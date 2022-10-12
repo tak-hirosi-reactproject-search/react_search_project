@@ -147,8 +147,21 @@ function App() {
       // django api url => http://192.168.0.214:3355
       const res = await fetch(target_url+'search/'+encodeURI(qstr)+"/");
       const result = await res.json();
+      
+      const jres = [];
+      result.map((obj =>{
+        const new_obj = {};
+        new_obj.bbox_id = obj.bbox_id;
+        new_obj.crop_img_path = obj.crop_img_path;
+        new_obj.frame_num = obj.frame_num;
+        new_obj.obj_id = obj.obj_id;
+        jres.push(new_obj);
+        
+      }));
 
-      setSearchResults(res);
+
+      setSearchResults(jres);
+      console.log("==================");
       console.log(searchResults);
     }
     get();
@@ -159,18 +172,29 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> GPA5.33.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <div className='search-result'>
+            {searchResults.map((obj) => (
+              <div className="obj-item" key={obj.bbox_id}>
+                <h3>PATH : {obj.crop_img_path}</h3>
+                <p>FRAME : {obj.frame_num}</p>
+                <hr/>
+              </div>
+            ))}
+          </div>
+          {/* <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> GPA5.33.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a> */}
+        </div>
       </header>
       
       <body>
