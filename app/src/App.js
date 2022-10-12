@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import searchResult from './SearchResult';
 import React, { useCallback, useState } from 'react';
 import MultiSelect from  'react-multiple-select-dropdown-lite';
 import 'react-multiple-select-dropdown-lite/dist/index.css';
@@ -111,16 +111,15 @@ function App() {
   /* // 드롭바4 끝 */
 
   // And Or button
-  const [condition, setCondition] = useState("union");
+  const [condition, setCondition] = useState("intersect");
   const onCheckedCondition = useCallback(
     (checked) =>{
       if(checked) {
-        setCondition("intersect");
-      }
-      else {
         setCondition("union");
       }
-      console.log("Condition : " + condition);
+      else {
+        setCondition("intersect");
+      }
     },
     [condition]
   );
@@ -159,21 +158,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> GPA5.33.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
+      <div className='App-header'>
+        <searchResult />
+      </div>
+      
       <body>
         <div class="container">
           <div class="hero">
@@ -284,10 +272,6 @@ function App() {
 
                               
 
- 
-
-
-
               {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ연습용ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
               <body>
                 <div class="box1"></div>
@@ -295,17 +279,10 @@ function App() {
               </body>
               {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
 
-
-
           </div>
         </div>
       </body>
     </div>
-
-
-
-
-
   );
 }
 
