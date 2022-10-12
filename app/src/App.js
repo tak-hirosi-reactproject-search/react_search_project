@@ -6,16 +6,17 @@ import 'react-multiple-select-dropdown-lite/dist/index.css';
 import qs from 'qs';
 
 function App() {
-
+  // django api url => http://192.168.0.214:3333
+  const target_url = 'http://192.168.0.214:3333/';
   // Video menu list
   const [videos, setVideoList] = useState([])
 
   const handleVideoMenuSetting = val =>{
     async function get(){
-      // django api url => http://192.168.0.214:3355
-      const res = await fetch('http://192.168.0.214:3355/video/');
+      console.log("video menu url :" + target_url+'video/')
+      const res = await fetch(target_url+'video/');
       const result = await res.json();
-
+      
       const jres = [];
       result.map((obj =>{
         const new_obj = {};
@@ -143,9 +144,9 @@ function App() {
         bottom_color,
         condition,
       });
-      console.log("Get : "+ 'http://192.168.0.214:3355/search/'+qstr+"/");
+      console.log("Get : "+ target_url+'search/'+qstr+"/");
       // django api url => http://192.168.0.214:3355
-      const res = await fetch('http://192.168.0.214:3355/search/'+qstr+"/");
+      const res = await fetch(target_url+'search/'+qstr+"/");
       const result = await res.json();
 
       setSearchResults(res);
