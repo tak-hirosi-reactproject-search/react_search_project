@@ -10,6 +10,9 @@ ARG fname
 
 ENV Portnum="0.0.0.0:${portnum}"
 
+# datapath copy
+RUN mkdir -p /videometadata
+
 # 작업 폴더를 만들고 npm 설치
 RUN mkdir -p /${fname}
 WORKDIR /${fname}

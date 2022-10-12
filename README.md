@@ -3,8 +3,8 @@ using (react - django RESTapi ) study project!
 
 # how to install
 ```bash
-git clone https://github.com/tak-hirosi-reactproject-search/react_search_project.git
-cd react_search_project
+git clone https://github.com/tak-hirosi-reactproject-search/react_search_project.git videofront
+cd videofront
 ```
 
 # node.js 가 깔린 환경에서 실행
@@ -29,6 +29,7 @@ react가 실행가능한 환경 구축
 UID={#change}
 USR={#change}
 PORT_NUM=3000 # {#change}
+VIDEO_TARGET_PATH=/home/samchu/project-meta/ # {#change}
 ```
 
 ### how to docker run
