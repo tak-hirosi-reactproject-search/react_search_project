@@ -45,10 +45,10 @@ function App() {
   }
 
   const  optionTopType  = [
-    { label:  'long sleeve', value:  '1'  },
-    { label:  'short sleeve', value:  '2'  },
-    { label:  'sleeveless', value:  '3'  },
-    { label:  'onepiece', value:  '4'  },
+    { label:  'long sleeve', value:  'long_sleeve'  },
+    { label:  'short sleeve', value:  'short_sleeve'  },
+    { label:  'sleeveless', value:  'sleeveless'  },
+    { label:  'onepiece', value:  'onepiece'  },
   ]
   // 드롭바1 끝
 
@@ -60,17 +60,17 @@ function App() {
   }
 
   const  optionTopColor  = [
-    { label:  'red', value:  '5'  },
-    { label:  'orange', value:  '6'  },
-    { label:  'yellow', value:  '7'  },
-    { label:  'green', value:  '8'  },
-    { label:  'blue', value:  '9'  },
-    { label:  'purple', value:  '10'  },
-    { label:  'pink', value:  '11'  },
-    { label:  'brown', value:  '12'  },
-    { label:  'white', value:  '13'  },
-    { label:  'grey', value:  '14'  },
-    { label:  'black', value:  '15'  },
+    { label:  'red', value:  'red'  },
+    { label:  'orange', value:  'orange'  },
+    { label:  'yellow', value:  'yellow'  },
+    { label:  'green', value:  'green'  },
+    { label:  'blue', value:  'blue'  },
+    { label:  'purple', value:  'purple'  },
+    { label:  'pink', value:  'pink'  },
+    { label:  'brown', value:  'brown'  },
+    { label:  'white', value:  'white'  },
+    { label:  'grey', value:  'grey'  },
+    { label:  'black', value:  'black'  },
   ]
   // 드롭바2 끝
 
@@ -82,9 +82,9 @@ function App() {
     }
 
     const  optionBottomType  = [
-      { label:  'long_pants', value:  '16'  },
-      { label:  'short_pants', value:  '17'  },
-      { label:  'skirt', value:  '18'  },
+      { label:  'long pants', value:  'long_pants'  },
+      { label:  'short pants', value:  'short_pants'  },
+      { label:  'skirt', value:  'skirt'  },
     ]
   // 드롭바3 끝
 
@@ -96,17 +96,17 @@ function App() {
   }
 
   const  optionBottomColor  = [
-    { label:  'red', value:  '19'  },
-    { label:  'orange', value:  '20'  },
-    { label:  'yellow', value:  '21'  },
-    { label:  'green', value:  '22'  },
-    { label:  'blue', value:  '23'  },
-    { label:  'purple', value:  '24'  },
-    { label:  'pink', value:  '25'  },
-    { label:  'brown', value:  '26'  },
-    { label:  'white', value:  '27'  },
-    { label:  'grey', value:  '28'  },
-    { label:  'black', value:  '29'  },
+    { label:  'red', value:  'red'  },
+    { label:  'orange', value:  'orange'  },
+    { label:  'yellow', value:  'yellow'  },
+    { label:  'green', value:  'green'  },
+    { label:  'blue', value:  'blue'  },
+    { label:  'purple', value:  'purple'  },
+    { label:  'pink', value:  'pink'  },
+    { label:  'brown', value:  'brown'  },
+    { label:  'white', value:  'white'  },
+    { label:  'grey', value:  'grey'  },
+    { label:  'black', value:  'black'  },
   ]
   /* // 드롭바4 끝 */
 
@@ -143,9 +143,9 @@ function App() {
         bottom_color,
         condition,
       });
-      console.log("Get : "+ target_url+'search/'+qstr+"/");
+      console.log("Get : "+ target_url+'search/'+encodeURI(qstr)+"/");
       // django api url => http://192.168.0.214:3355
-      const res = await fetch(target_url+'search/'+qstr+"/");
+      const res = await fetch(target_url+'search/'+encodeURI(qstr)+"/");
       const result = await res.json();
 
       setSearchResults(res);
