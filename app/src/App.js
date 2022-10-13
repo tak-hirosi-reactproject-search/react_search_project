@@ -7,7 +7,7 @@ import qs from 'qs';
 
 function App() {
   // django api url => http://192.168.0.214:3333
-  const target_url = 'http://192.168.0.214:3355/';
+  const target_url = 'http://192.168.0.214:3333/';
   // Video menu list
   const [videos, setVideoList] = useState([])
 
