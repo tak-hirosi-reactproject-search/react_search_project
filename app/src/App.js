@@ -308,11 +308,12 @@ function App() {
 
                               
 
-              {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ연습용ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
-              <body>
-                <div class="box1"></div>
-                <div class="box2"></div>
-              </body>
+              {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ버튼 효과 연습용ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
+              
+              <button class="custom-btn btn-13">Read More</button>
+              
+
+
               {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
 
           </div>
