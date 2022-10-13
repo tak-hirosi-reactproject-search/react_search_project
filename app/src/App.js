@@ -152,7 +152,7 @@ function App() {
       result.map((obj =>{
         const new_obj = {};
         new_obj.bbox_id = obj.bbox_id;
-        new_obj.crop_img_path = obj.crop_img_path;
+        new_obj.image = obj.image;
         new_obj.frame_num = obj.frame_num;
         new_obj.obj_id = obj.obj_id;
         jres.push(new_obj);
@@ -176,7 +176,8 @@ function App() {
           <div className='search-result'>
             {searchResults.map((obj) => (
               <div className="obj-item" key={obj.bbox_id}>
-                <h5>PATH : {obj.crop_img_path}</h5>
+                <img src={obj.image} />
+                <h4>PATH : {obj.image}</h4>
                 <hr/>
                 <p>FRAME : {obj.frame_num}</p>
               </div>
