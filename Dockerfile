@@ -1,4 +1,4 @@
-FROM node:16.17.0-alpine
+FROM node:16.17.0
 
 # Setup user account
 # id -g, id -u
@@ -21,4 +21,5 @@ COPY ./app/package.json /${fname}
 RUN npm install react-scripts@5.0.1 -g
 RUN npm install
 
+COPY . /${fname}
 CMD npm run start ${Portnum}
