@@ -7,14 +7,14 @@ import qs from 'qs';
 
 function App() {
   // django api url => http://192.168.0.214:3333
-  const target_url = 'http://192.168.0.214:3333/';
+  const target_url = 'http://192.168.0.214:3333';
   // Video menu list
   const [videos, setVideoList] = useState([])
 
   const handleVideoMenuSetting = val =>{
     async function get(){
-      console.log("video menu url :" + target_url+'video/')
-      const res = await fetch(target_url+'video/');
+      console.log("video menu url :" + target_url+'/video/')
+      const res = await fetch(target_url+'/video/');
       const result = await res.json();
       
       const jres = [];
@@ -143,9 +143,9 @@ function App() {
         bottom_color,
         condition,
       });
-      console.log("Get : "+ target_url+'search/'+encodeURI(qstr)+"/");
+      console.log("Get : "+ target_url+'/search/'+encodeURI(qstr)+"/");
       // django api url => http://192.168.0.214:3355
-      const res = await fetch(target_url+'search/'+encodeURI(qstr)+"/");
+      const res = await fetch(target_url+'/search/'+encodeURI(qstr)+"/");
       const result = await res.json();
       
       const jres = [];
@@ -176,8 +176,7 @@ function App() {
           <div className='search-result'>
             {searchResults.map((obj) => (
               <div className="obj-item" key={obj.bbox_id}>
-                <img src={obj.image} />
-                <h4>PATH : {obj.image}</h4>
+                <img src={target_url + obj.image} />
                 <hr/>
                 <p>FRAME : {obj.frame_num}</p>
               </div>
