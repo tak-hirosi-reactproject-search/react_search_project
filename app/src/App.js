@@ -211,28 +211,36 @@ function App() {
               </div>
 
 
-
-                <li><a href="#">시작시간 시간선택 UI</a></li>
-                <li><a href="#">종료시간 시간선택 UI</a></li>
-
-
+              <p>
+              <button class="custom-button2 button-eff">
+              시작시간 시간선택 UI
+              </button>
+              </p>
+                                                      
+                                                      
+              <p>
+              <button class="custom-button2 button-eff">
+              종료시간 시간선택 UI
+              </button>
+              </p>
 
 
               <div class="parent6">
-                                            <p><a href="#">상의 종류</a></p>
+                          
+                          <p>상의 종류</p>
                           
                           <div className='video-menu'>
                             <MultiSelect
                               onChange={handleOnchangeAttributeTopType}
                               options={optionTopType}
                               name="영상선택"/>
-                            </div>
+                          </div>
               </div>
 
 
 
               <div class="parent5">
-                                            <p><a href="#">상의 색상</a></p>
+                                            <p>상의 색상</p>
               {/* 이것도 드롭바 관련된듯? -시작 */}
                             
                             <div className='video-menu'>
@@ -247,7 +255,7 @@ function App() {
 
 
               <div class="parent2">
-                                            <p><a href="#">AND</a></p>
+                                            <p>AND</p>
                             <label class="switch-button">
                             <input 
                               type="checkbox"
@@ -255,13 +263,13 @@ function App() {
                             />
                             <span class="onoff-switch"></span>
                             </label>
-                                            <p><a href="#">OR</a></p>
+                                            <p>OR</p>
               </div> 
                               
 
 
               <div class="parent4">
-                                            <p><a href="#">하의 종류</a></p>
+                                            <p>하의 종류</p>
               {/* 이것도 드롭바 관련된듯? -테스트*/}
                             
                             <div className='video-menu'>
@@ -276,7 +284,7 @@ function App() {
 
 
               <div class="parent2">
-                                            <p><a href="#">하의 색상</a></p>
+                                            <p>하의 색상</p>
               {/* /* 이것도 드롭바 관련된듯? -테스트*/}
                            
                             <div className='video-menu'>
@@ -291,27 +299,24 @@ function App() {
 
 
               <div class="parent">
-                                          {/* <div className='select-botton'> */}
-                                            <li>
-                                              <a href="#" onClick={e => handleSearchObjects(e)}>
-                                              검색
-                                              </a>
-                                            </li>
-                                          {/* </div> */}
+                  <p>
+                   <button class="custom-button button-eff"> 
+                   검색
+                   </button>
+                  </p>
 
-                                            <li><a href="#">SR 저장</a></li>
-                                            {/* <div class="box1"></div> */}
-                                            {/* <div class="box2"></div> */}
+                  <p>
+                   <button class="custom-button button-eff">
+                   SR 저장
+                   </button>
+                  </p>
               </div>
 
 
                               
 
-              {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ버튼 효과 연습용ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
-              
-              <button class="custom-btn btn-13">Read More</button>
-              
-
+              {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ버튼 효과 연습용ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
+            
 
               {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
 

@@ -1,7 +1,7 @@
 .App {
   display: flex;
   text-align: center;
-  background: none;                    /*백그라운드 색깔 없애기*/
+  background: rgb(22, 22, 22);                   /*백그라운드 색깔 없애기*/
 }
 
 .App-logo {
@@ -85,7 +85,7 @@
   background: none;                    /*백그라운드 색깔 없애기*/
   border: 1px solid rgba(0, 0, 0, 0.041);    /*색깔 적용*/
   color: rgb(255, 255, 255);                      /*글자 색깔*/
-  padding: 10px 40px ;                 /*글자크기*/
+  padding: 10px ;                     /*글자가 있는 곳의 세로폭 - 중요 */
   border-radius: 15px;                 /*테두리*/
   margin-top: 50px;                    /*데두리와 글자사이 간격*/
   outline: none;                       /*클릭했을때 잔상 없애기*/
@@ -97,8 +97,8 @@
 
 /*글자 위치 이동*/
 .container .hero li{
-  height: 30px;
-  margin: 30px;
+  height: 30px;                         /*글자가 있는 곳의 세로폭 - 중요*/
+  margin: 30px;                         /*뭔진 모르겠지만 일단 전체폭 - 중요*/
   justify-content: space-between;
   align-items: center;                    /*글자 중앙정렬*/
 }
@@ -114,8 +114,7 @@
   outline: none;                       /*클릭했을때 잔상 없애기*/
   cursor: pointer;                     /*마우스를 위에 올렸을때 커서 변화*/
   transition: all .4s;                 /*마우스를 위에 올렸을때 천천히 색깔 변화*/
-  background-color: none
-  
+  background-color: none;
 }
 
 
@@ -252,38 +251,103 @@
 /* 참고 사이트: https://tamagotch.tistory.com/8 */
 
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ버튼효과ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-/* .parent {
-  background-color: #ff0000;
-  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
-  border: none;
-  z-index: 1;
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ버튼 클릭 효과ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+body {
+  background: #4e5f80;
 }
-.parent:after {
+h1 {
+  position: relative;
+  text-align: center;
+  color: #000000;
+  font-size: 10px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #000000;
+}
+.frame {
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+  background-color: rgb(0, 0, 0);
+}
+.custom-button {
+  width: 130px;
+  height: 45px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.377);
+  font-size: 0.5cm;
+}
+.custom-button2 {
+  width: 350px;
+  height: 45px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.377);
+  font-size: 0.5cm;
+}
+.button-eff {
+  border: none;
+  color: rgb(255, 255, 255);
+  
+}
+.button-eff:after {
   position: absolute;
   content: "";
-  width: 100%;
-  height: 0;
-  bottom: 0;
+  width: 0;
+  height: 100%;
+  top: 0;
   left: 0;
+  direction: rtl;
   z-index: -1;
-  border-radius: 5px;
-  background-color: #934dcc;
-  background-image: linear-gradient(315deg, #6708ff 0%, #ff0000 74%);
   box-shadow:
-   -7px -7px 20px 0px rgba(255, 0, 0, 0.6),
-   -4px -4px 5px 0px rgba(255, 0, 0, 0.6),
+   -7px -7px 20px 0px rgba(202, 21, 21, 0.6),
+   -4px -4px 5px 0px rgba(211, 27, 27, 0.6),
    7px 7px 20px 0px #0002,
    4px 4px 5px 0px #0001;
   transition: all 0.3s ease;
 }
-.parent:hover {
-  color: rgb(255, 0, 0);
+.button-eff:hover {
+  color: rgba(0, 0, 0, 0.411);
 }
-.parent:hover:after {
-  top: 0;
-  height: 100%;
+.button-eff:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
 }
-.parent:active {
-  top: 2px;
-} */
+.button-eff:active {
+  top: 5px;
+}
