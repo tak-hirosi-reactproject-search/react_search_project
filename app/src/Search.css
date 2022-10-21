@@ -1,16 +1,16 @@
-.App {
+.Search {
   display: flex;
   text-align: center;
   background: rgb(22, 22, 22);                   /*백그라운드 색깔 없애기*/
 }
 
-.App-logo {
+.Search-logo {
   height: 40vmin;
   animation: App-logo-spin infinite 20s linear;
   pointer-events: none;
 }
 
-.App-header {
+.Search-header {
   background-color: #494949;
   min-height: 100vh;
   display: flex;
@@ -65,11 +65,11 @@
 }
 
 
-.App-link {
+.Search-link {
   color: #242424b4;
 }
 
-@keyframes App-logo-spin {
+@keyframes Search-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -197,7 +197,7 @@
 .video-menu{
   display: flex;
   flex-grow: 1;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   padding-top: 10px;
   padding-left: 10px;
@@ -280,7 +280,7 @@ button {
   background-color: rgb(0, 0, 0);
 }
 .custom-button {
-  width: 130px;
+  width: 120px;
   height: 45px;
   color: rgb(255, 255, 255);
   border-radius: 5px;

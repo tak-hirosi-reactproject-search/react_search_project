@@ -18,8 +18,7 @@ RUN mkdir -p /${fname}
 WORKDIR /${fname}
 
 COPY ./app/package.json /${fname}
-RUN npm install react-scripts@5.0.1 -g
-RUN npm install
+RUN npm install react-scripts@5.0.1 -g && npm install && npm install --save react-router-dom 
 
 COPY . /${fname}
 CMD npm run start ${Portnum}

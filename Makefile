@@ -1,5 +1,5 @@
-UID=
-USR=
+UID=1006
+USR=jhlee
 PORT_NUM=3000
 VIDEO_TARGET_PATH=/home/samchu/project-meta/
 
