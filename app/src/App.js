@@ -20,7 +20,8 @@ function App() {
       const jres = [];
       result.map((obj =>{
         const new_obj = {};
-        new_obj.label = obj.name;
+        const video_url = obj.video.split('/')
+        new_obj.label = video_url[video_url.length - 1];
         new_obj.value = obj.id;
         jres.push(new_obj);
         
@@ -156,13 +157,10 @@ function App() {
         new_obj.frame_num = obj.frame_num;
         new_obj.obj_id = obj.obj_id;
         jres.push(new_obj);
-        
       }));
 
 
       setSearchResults(jres);
-      console.log("==================");
-      console.log(searchResults);
     }
     get();
   };
@@ -300,7 +298,9 @@ function App() {
 
               <div class="parent">
                   <p>
-                   <button class="custom-button button-eff"> 
+                   <button
+                   class="custom-button button-eff"
+                   onClick={(e)=>handleSearchObjects(e)}> 
                    검색
                    </button>
                   </p>
