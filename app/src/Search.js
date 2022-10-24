@@ -21,7 +21,7 @@ function Search () {
       const jres = [];
       result.map((obj =>{
         const new_obj = {};
-        new_obj.label = obj.video;
+        new_obj.label = obj.name;
         new_obj.value = obj.id;
         jres.push(new_obj);
         
