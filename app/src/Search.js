@@ -8,7 +8,7 @@ import axios from 'axios'
 
 function Search () {
   // django api url => http://192.168.0.214:3333
-  const target_url = 'http://192.168.0.214:3333';
+  const target_url = 'http://localhost:3333';
   // Video menu list
   const [videos, setVideoList] = useState([])
 
@@ -183,7 +183,7 @@ function Search () {
         let reader = new FileReader();
         reader.onload = () => {
           fileURLs[i] = reader.result;
-          setFileList([...fileURLs]);
+          setFileList([...fileURLs, file.name]);
         };
         reader.readAsDataURL(file);
       }
@@ -198,13 +198,14 @@ function Search () {
             .post(
                 target_url + '/video/',
                 {
-                  "video" : fileList,
+                  "video" : fileList[0],
+                  "name" : fileList[1],
                   "fps" : null,
                   "last_frame" : null
                 }
             )
             .then((res) => {
-                if (res.data) {
+                if (res) {
                     alert(res.data);
                 } else {
                     alert(res.data.msg);
