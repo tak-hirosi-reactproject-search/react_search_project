@@ -405,15 +405,20 @@ function Search () {
                                     <div></div>
                                     <form>
                                       <input type = "file" multiple={true} id="fileUpload" accept=".mp4" onChange={uploadHandler}  />
-                                      
-                                    </form>
-                                    <button
+                                      <button
                                       class="custom-button button-eff"
                                       onClick={(e) => onClickHandler(e)}> 
-                                      Inference
-                                    </button> 
+                                      ㅎ
+                                      </button> 
+                                    </form>
+                                    {/* <button
+                                      class="custom-button button-eff"
+                                      onClick={(e) => onClickHandler(e)}> 
+                                      Inference2
+                                    </button>  */}
                                   </Modal>
                               </div>
+
                 {/* 이것도 드롭바 관련된듯? -테스트*/}
                 </div>
 
@@ -429,7 +434,7 @@ function Search () {
                     <button
                       class="custom-button button-eff"
                       onClick={(e) => handleSearchObjects(e)}> 
-                    검색
+                    검색11
                     </button>
                     </p>
 

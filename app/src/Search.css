@@ -351,3 +351,12 @@ button {
 .button-eff:active {
   top: 5px;
 }
+
+
+.custom-button button-eff {
+  display: flex;
+  flex-grow: 1;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
