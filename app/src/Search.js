@@ -8,7 +8,7 @@ import axios from 'axios'
 
 function Search () {
   // django api url => http://192.168.0.214:3333
-  const target_url = 'http://localhost:3333';
+  const target_url = 'http://192.168.0.214:3333';
   // Video menu list
   const [videos, setVideoList] = useState([])
 
@@ -183,7 +183,7 @@ function Search () {
         let reader = new FileReader();
         reader.onload = () => {
           fileURLs[i] = reader.result;
-          setFileList([...fileURLs, file.name]);
+          setFileList([fileURLs, file.name]);
         };
         reader.readAsDataURL(file);
       }
@@ -199,9 +199,7 @@ function Search () {
                 target_url + '/video/',
                 {
                   "video" : fileList[0],
-                  "name" : fileList[1],
-                  "fps" : null,
-                  "last_frame" : null
+                  "name" : fileList[1]
                 }
             )
             .then((res) => {
@@ -401,21 +399,17 @@ function Search () {
                                     style={customStyles}
                                     contentLabel="Example Modal"
                                   >
-                                    
-                                    <div></div>
-                                    <form>
+                                  <div className = 'form-custom'>
+                                    <form class = "form-custom">
                                       <input type = "file" multiple={true} id="fileUpload" accept=".mp4" onChange={uploadHandler}  />
-                                      <button
-                                      class="custom-button button-eff"
-                                      onClick={(e) => onClickHandler(e)}> 
-                                      ㅎ
-                                      </button> 
                                     </form>
-                                    {/* <button
+                                  
+                                    {<button
                                       class="custom-button button-eff"
                                       onClick={(e) => onClickHandler(e)}> 
-                                      Inference2
-                                    </button>  */}
+                                      Upload
+                                    </button>  }
+                                    </div>
                                   </Modal>
                               </div>
 
@@ -427,14 +421,14 @@ function Search () {
                     <button
                       class="custom-button button-eff"
                       onClick={(e) => openModalHandler(e)}> 
-                    업로드
+                    추론
                     </button>
                     </p>
                     <p>
                     <button
                       class="custom-button button-eff"
                       onClick={(e) => handleSearchObjects(e)}> 
-                    검색11
+                    검색
                     </button>
                     </p>
 
