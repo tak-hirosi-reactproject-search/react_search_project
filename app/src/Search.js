@@ -140,7 +140,8 @@ function Search () {
   // And Or button
 
   //modal
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, 
+        ] = React.useState(false);
   
   const openModalHandler = val =>{
     setIsOpen(!modalIsOpen);
@@ -268,7 +269,7 @@ function Search () {
             <div className='search-result'>
               {searchResults.map((obj) => (
                 <div className="obj-item" key={obj.bbox_id}>
-                  <img src={target_url + obj.image} />
+                  <img src={target_url + obj.image} width = "64" height = "108" />
                   <hr/>
                   <p>FRAME : {obj.frame_num}</p>
                 </div>
